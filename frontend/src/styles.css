@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+.chat-box-header, .chat-button {
+    display: none !important;
+    height: 0 !important;
+}
+.wrapper, .chat-box-main, .chat-box-footer  {
+    width: 480px !important;
+}
+.chat-box{
+    width: 480px !important;
+    top: 100px !important;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Create 2 columns and auto-place rows */
+}
+
+.radioButtons{
+    background: #e4df53;
+    padding-top: 10px;
+    height: 40px;
+    width: 100%;
+    display: inline-flex
+}
+
+.imageBlock{
+    border: 1px black;
+}
+

@@ -1,0 +1,33 @@
+img {
+    width: 310px;
+    height: 235px;
+}
+input {
+    padding-left: 2px;
+}
+button {
+    border-radius: 4px;
+    width: 145px;
+    border: none;
+    background-color: #44a2c0;
+    color: white;
+}
+.header {
+    background-color: rgb(25, 27, 27);
+    color: white;
+    height: 55px;
+    font-size: x-large;
+    padding: 7px;
+    width: 100%;
+    text-align: center;
+}
+.timeRow {
+    width: 100%;
+    text-align: right;
+}
+.center {
+    text-align: center;
+}
+.content {
+    height: 655px;
+}
