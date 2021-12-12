@@ -8,7 +8,7 @@ The virtual environment has to be activated by going into the /env/Scripts direc
 Next go in to the main directory and run 
 `python manage.py migrate`
 
-## Additional Help
+#### Additional Help
 Make sure other dependencies are installed. Any errors should be solves by the following commands:
 `pip install Django`
 
