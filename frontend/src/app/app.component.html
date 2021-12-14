@@ -1,0 +1,100 @@
+<div class="col-md-12">
+
+  <div class="row" class="header">PhotoBook Dialog System</div>
+
+  <div class="col-md-12">
+    <div class="row">
+      <p class="timeRow">Time Elapsed: <span ngModel='timeSpent'>{{timeSpent}} seconds</span></p>
+    </div>
+  </div>
+<div class="row content">
+  <!-- <div class="col-md-8">
+    <div class="row">
+    </div>
+    <div class="row">
+      <div class="col-md-4"><img src="assets/car_truck/COCO_train2014_000000056549.jpg"></div>
+      <div class="col-md-4"><img src="assets/person_teddy_bear/COCO_train2014_000000136701.jpg"></div>
+      <div class="col-md-4"><img src="assets/person_surfboard/COCO_train2014_000000097094.jpg"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-6">
+            <input type="radio" id="common" name="common" value="common">Common 
+          </div>
+          <div class="col-md-6">
+            <input type="radio" id="diff" name="diff" value="diff">Different
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-6">
+            <input type="radio" id="common" name="common" value="common">Common 
+          </div>
+          <div class="col-md-6">
+            <input type="radio" id="diff" name="diff" value="diff">Different
+          </div>
+        </div>
+      </div>
+    </div>
+    
+   
+    <div class="row">
+      <div class="col-md-4"><img [src]='img4'></div>
+      <div class="col-md-4"><img src="assets/person_tv/COCO_train2014_000000288713.jpg"></div>
+      <div class="col-md-4"><img src="assets/person_umbrella/COCO_train2014_000000036282.jpg"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-6">
+            <input type="radio" id="common" name="common" value="common">Common 
+          </div>
+          <div class="col-md-6">
+            <input type="radio" id="diff" name="diff" value="diff">Different
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12"><button type="button">Submit Selection!</button></div>
+    </div>
+
+
+  </div> -->
+  <div class="col-md-8 grid">
+    <div  *ngFor="let image of images; let i= index">
+      <img style="width: 280px;height: 250px;" [src]='image.url'>
+        <!-- <div>
+          <input type="radio" id="common" name="common" value="common">Common 
+        </div> -->
+        <div class="radioButtons">
+          <div class="col-md-6">
+            <input type="radio" [ngModel]="image.common" [name]="'common'+i" value="yes" (change)="onSelectionChange(image)">Common 
+          </div>
+          <div class="col-md-6">
+            <input type="radio"  [ngModel]="image.common" [name]="'common'+i" value="no" (change)="onSelectionChange(image)">Different
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12"><button type="button" (click)="submitSelection()">Submit Selection!</button></div>
+      </div>
+   </div>
+  
+  <div class="col-md-4">
+    <chat-widget ></chat-widget>
+
+  </div>
+
+
+</div>
+
+<!-- <chat-widget-component></chat-widget-component> -->
+</div>
+
